@@ -1,3 +1,7 @@
+
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
 }
@@ -10,18 +14,18 @@ nav {
   color: white;
   position: sticky;
   top: 0;
-
+  padding: 1rem;
 }
 .video {
   height: 50vh;
   background: black;
   position: relative;
 }
-video{
+video {
   width: 100%;
   height: 100%;
- /* for covering the whole space by video */
-  object-fit: cover; 
+  /* for covering the whole space by video */
+  object-fit: cover;
 }
 .video > div {
   position: absolute;
@@ -35,6 +39,7 @@ video{
   border: solid 1px green;
   backdrop-filter: blur(20px);
 }
+
 .container {
   width: 80%;
   margin: auto;
@@ -47,11 +52,12 @@ video{
   display: flex;
   list-style: none;
   align-items: center;
+  
 }
 .top-menu ul li {
   margin-left: 1rem;
   transition: color 0.5s;
-
+ 
 }
 .top-menu ul li:hover {
   color: red;
@@ -59,9 +65,10 @@ video{
   transform: scale(1.3);
 }
 .logo {
+  padding: 10px;
   background: linear-gradient(green, yellow);
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -87,7 +94,8 @@ video{
   background-attachment: fixed;
 }
 .img3 {
-  background: url(assets/img1.jpg) no-repeat center center;
+  background: url(https://www.shutterstock.com/image-photo/coronavirus-control-team-professional-virologists-600w-1697944825.jpg)
+    no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -98,4 +106,34 @@ video{
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
+}
+.go {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: red;
+  /* animation: arrowdown 2s infinite; */
+  transform: rotate(90deg);
+
+
+  animation: down 2s ease-out infinite;
+}
+@keyframes down {
+  0%{
+    left: 50%;
+    bottom:50px ;
+  }
+  100%{
+    bottom: 20px;
+
+
+  }
+}
+.go-up{
+  margin: 3px;
+  padding: 10px;
+  color: white;
+ 
 }
